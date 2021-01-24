@@ -31,8 +31,7 @@ const App = () => {
        setRequestError(err.message);
        console.log(requestError);
      }
-   }); 
-  }
+   });
 
   return (
     <div className="App">
