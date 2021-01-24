@@ -12,13 +12,17 @@ const App = () => {
           username: "admin",
           senha: "admin",
         },
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+        },
       }).then(function (response) {
         if (response.status < 400) {
           console.log(response.data);
         }
       });
     } catch (error) {
-      console.log("error");
+      console.log(error);
     }
   }
 
@@ -28,7 +32,5 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
 
 export default App;
