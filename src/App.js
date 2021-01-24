@@ -7,14 +7,13 @@ const App = () => {
       await axios({
         method: "get",
         url: "http://18.230.65.107:5000/auth/user",
-        data: {
-          company: 1,
-          username: "admin",
-          senha: "admin",
+        params: {
+          "company": 1,
+          "username": "admin",
+          "password": "admin",
         },
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Headers": "Content-Type",
         },
       }).then(function (response) {
         if (response.status < 400) {
